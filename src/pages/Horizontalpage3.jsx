@@ -1,17 +1,34 @@
+import { click } from '@testing-library/user-event/dist/click';
 import React from 'react'
 import { useState } from 'react';
 import "../App.css";
 
 function Horizontalpage3() {
 
-  const [gnbStatus, setGnbStatus] = useState(false);
+  const [toggleStatus, setToggleStatus] = useState(false);
+  const [disable, setDisable] =useState(false);
 
-  const onClickGnb = (e) => {
-    setGnbStatus(prevStatus => prevStatus ? false : true);
+  const onClickToggle = (e) => {
+    setToggleStatus(prevStatus => prevStatus ? false : true);
+
 
   };
 
-  const GnbMenu = () => (
+  const onClickDisable = (e) => {
+    
+  };
+
+
+  function button(){
+    if(click.onClickToggle){
+      return onClickDisable
+    }
+   
+
+    
+  }
+
+  const ToggleMenu = () => (
     <div className='GnbMenuContainer'>
       <ul className='Toggle'>
         <li>Toggle 1</li>
@@ -21,22 +38,26 @@ function Horizontalpage3() {
   </div>
   );
 
+  
+
   return (
     <div>
-       
-       <button className='ToggleButton' onClick={onClickGnb} >
-        {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg> */}
-        Toggle Button
+       <button className='ToggleButton' onClick={()=>{ 
+          onClickToggle()
+          
+          }} >
+          
+          Toggle Button
        </button>
 
-       <div className='space'/>
+         <div className='space'/>
 
-       <button className='DisableButton'>
+       <button className='DisableButton' disabled={disable} onClick={()=> setDisable(true)}>
           button2
        </button>
 
-       { gnbStatus ? <GnbMenu /> : null}
-
+       { toggleStatus ? <ToggleMenu /> : null}
+       
     </div>
     
   )

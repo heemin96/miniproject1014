@@ -6,8 +6,6 @@
 
 .swiper {
   
-
-
   height:100vh;
   width: 100vh;
   display: flex;
@@ -46,7 +44,7 @@
 
 .Toggle{
   list-style: none; 
-  font-size: 30px;
+  font-size: 25px;
   font-family: #4A4D57;
   
 
@@ -117,3 +115,11 @@
   gap: 8px;
   height: 36px;
 }
+
+/* .activebtn{
+  background-color: #0095f6;
+}
+
+.unactivebtn{
+  background-color: #b2dffc;
+} */

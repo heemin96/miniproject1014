@@ -21,6 +21,7 @@ import "swiper/css/pagination";
 // Import Swiper React components
 
 import { Mousewheel, Keyboard } from "swiper";
+import Appbutton from "./ui/Appbutton";
 // Import Swiper styles
 
 
@@ -79,9 +80,9 @@ export default function App() {
               observer={"true"}
               resistance={"false"}              
           >
-                <SwiperSlide > <button onClick={component1Click}>1</button>
-                               <button onClick={component2Click}>2</button>
-                               <button onClick={component3Click}>3</button> 
+                <SwiperSlide > <Appbutton onClick={component1Click}>1</Appbutton>
+                               <Appbutton onClick={component2Click}>2</Appbutton>
+                               <Appbutton onClick={component3Click}>3</Appbutton> 
                 </SwiperSlide>
                 
                 <SwiperSlide ><Horizontalpage2/></SwiperSlide>
@@ -101,6 +102,8 @@ export default function App() {
       </div>
     );
   }
+
+  
 
   //   const handleScroll = useCallback((num) => {
 //    switch(num) {
