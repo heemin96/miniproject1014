@@ -15,7 +15,7 @@ const StyledButton = styled.button`
   
 
   /* 크기 */
-  width:4rem;
+  width:10rem;
   height: 2.25rem;
   font-size: 1rem;
 

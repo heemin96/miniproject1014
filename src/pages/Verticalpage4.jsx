@@ -1,11 +1,14 @@
 import React from 'react'
+import { forwardRef } from 'react'
 
-function Verticalpage4() {
+const Verticalpage4 = forwardRef((props, ref) => {
+
   return (
-    <div>
+  <div ref={ref}>
+    {props.childeren}
       Verticalpage4
-    </div>
+  </div>
   )
-}
+})
 
 export default Verticalpage4

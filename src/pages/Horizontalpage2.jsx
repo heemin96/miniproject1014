@@ -1,11 +1,11 @@
-import Swiper from 'swiper'
 import React from 'react'
+import Appbutton from '../ui/Appbutton'
 
 function Horizontalpage2() {
   return (
-    <div>
+    <Appbutton>
       Horizontalpage2
-    </div>
+    </Appbutton>
   )
 }
 
