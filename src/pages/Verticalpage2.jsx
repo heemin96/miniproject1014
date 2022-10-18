@@ -1,23 +1,13 @@
 import React from 'react'
-import styled from "styled-components";
-import { forwardRef } from 'react'
-import MainPage from './MainPage';
-
-// const p = styled.div`
-// align-items: center;
-// align-self: center;
-// background-color: green;
-// `;
+import ButtonModule from '../ui/ButtonModule';
 
 
-
-const Verticalpage2 = forwardRef((props, ref) => {
+function Verticalpage2() {
 
     return (
-    <div ref={ref}>
-        {props.childeren}
-        Verticalpage2
-    </div>
+    <ButtonModule size='large'>    
+         앱 다운받기
+    </ButtonModule>
     )
-})
+}
 export default Verticalpage2

@@ -1,15 +1,14 @@
 import React from 'react'
-import { forwardRef } from 'react'
+import ButtonModule from '../ui/ButtonModule';
 
-const Verticalpage3 = forwardRef((props, ref) => {
+function Verticalpage3() {
 
-  return (
-  <div ref={ref}>
-    {props.childeren}
-      Verticalpage3
-  </div>
-  )
-})
-
+    return (
+    <ButtonModule size='small'>    
+         원하는 채널 선택
+    </ButtonModule>
+    )
+}
 export default Verticalpage3
- 
+
+

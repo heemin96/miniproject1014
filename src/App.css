@@ -5,9 +5,9 @@
 }
 
 .swiper {
-  
+  max-width: 1920px;
   height:100vh;
-  width: 100vh;
+  max-width: 1920px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +16,10 @@
 }
 
 .swiper-slide {
-
+  max-width: 1920px;
   font-size: 30px;
   height: 100vh;
-  width: 100%;
+  
   justify-content: center;
   display: flex;
   align-self: center;
@@ -28,12 +28,13 @@
 
 .swiper-wrapper{
   align-self: center;
-  width: 100%;
+  max-width: 1920px;
 }
 
 
 .swiper-wrapper .swiper-slide-active{
   align-self: center;
+  max-width: 1920px;
 }
 
 .space {
@@ -50,62 +51,69 @@
 
 }
 
-.ToggleButton{
-  padding: 7px 17px;
-  gap: 10px;
-  width: 180px;
-  height: 36px;
-  background: white;
-  border-radius: 12px;
-  border: 1px solid #DCDEE5;
-  font-family: #4A4D57;
-  cursor: pointer;
-  
+
+ 
+button[disabled]{
+  background-color: #026BFB;;
+  color: white;  
 }
 
-.DisableButton{
-  padding: 7px 17px;
-  gap: 10px;
-  width: 180px;
-  height: 36px;
-  background: white;
-  border-radius: 12px;
-  border: 1px solid #DCDEE5;
-  font-family: #4A4D57;
-  cursor: pointer;
-}
+
+
 
 .GnbMenuContainer{
   position: absolute;
 
-
 }
 
-.btn {
-
+.btn1 {
 
   padding: 7px 17px;
   gap: 10px;
-  width: 180px;
+  width: 140px;
   height: 36px;
-  background: white;
   border-radius: 12px;
   border: 1px solid #DCDEE5;
   font-family: #4A4D57;
   cursor: pointer;
+  background-color: white;
+  color: black;
   
-  
+}
 
+.btn2 {
+
+  padding: 7px 17px;
+  gap: 10px;
+  width: 95px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid #DCDEE5;
+  font-family: #4A4D57;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  
+}
+
+.btn3 {
+
+  padding: 7px 17px;
+  gap: 10px;
+  width: 110px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid #DCDEE5;
+  font-family: #4A4D57;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  
 }
 
 .active {
-
-
   background-color: #026BFB;
   color: white;
-  width: 210px
-  
- 
 }
 
 .container{

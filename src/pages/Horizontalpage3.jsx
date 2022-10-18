@@ -2,6 +2,7 @@ import { click } from '@testing-library/user-event/dist/click';
 import React from 'react'
 import { useState } from 'react';
 import "../App.css";
+import ButtonModule from '../ui/ButtonModule';
 
 function Horizontalpage3() {
 
@@ -9,58 +10,69 @@ function Horizontalpage3() {
   const [disable, setDisable] =useState(false);
 
   const onClickToggle = (e) => {
-    setToggleStatus(prevStatus => prevStatus ? false : true);
-
-
+    setToggleStatus(prevStatus => prevStatus ? false : true); //prevStatus : setState상태 값을 여러번 변경 할때 쓴다해서 썼슴다.
+    setDisable(!true)
   };
 
-  const onClickDisable = (e) => {
-    
+  const onClickDisable = (e) => { 
+    setDisable(prevStatus => prevStatus ? false : true);
+    setDisable(true)
   };
-
-
-  function button(){
-    if(click.onClickToggle){
-      return onClickDisable
-    }
-   
-
-    
-  }
-
-  const ToggleMenu = () => (
-    <div className='GnbMenuContainer'>
-      <ul className='Toggle'>
-        <li>Toggle 1</li>
-        <li>Toggle 2</li>
-        <li>Toggle 3</li>
-      </ul>
-  </div>
-  );
-
-  
 
   return (
     <div>
-       <button className='ToggleButton' onClick={()=>{ 
-          onClickToggle()
-          
-          }} >
-          
-          Toggle Button
-       </button>
+       <ButtonModule size='ToggleButton' disabled={!disable} onClick={()=>{ 
+          onClickToggle();
+          }}>
+          토글 버튼
+          {/* { toggleStatus ? <ToggleMenu /> : null} 기존 삼항연산자로 보이게 한 방법*/}
+          {/* { toggleStatus &&  <ToggleMenu />} 맥스님이 사용하는 방식*/} 
 
-         <div className='space'/>
+       </ButtonModule>
 
-       <button className='DisableButton' disabled={disable} onClick={()=> setDisable(true)}>
-          button2
-       </button>
+        <div className='space'/> 
 
-       { toggleStatus ? <ToggleMenu /> : null}
-       
+       <ButtonModule size='DisableButton' disabled={disable} onClick={()=> {  
+          onClickDisable();
+          }}>
+            Enable 버튼
+       </ButtonModule> 
     </div>
     
   )
 }
 
 export default Horizontalpage3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const ToggleMenu = () => (
+//   <div className='GnbMenuContainer'>
+//     <ul className='Toggle'>
+//       <li>Toggle 1</li>
+//       <li>Toggle 2</li>
+//       <li>Toggle 3</li>
+//     </ul>
+// </div>
+// );ㄷㄷㄷㄷ

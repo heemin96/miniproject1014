@@ -1,11 +1,11 @@
 import React from 'react'
-import Appbutton from '../ui/Appbutton'
+import ButtonModule from '../ui/ButtonModule'
 
 function Horizontalpage2() {
   return (
-    <Appbutton>
-      Horizontalpage2
-    </Appbutton>
+    <ButtonModule>
+      투자하기
+    </ButtonModule>
   )
 }
 

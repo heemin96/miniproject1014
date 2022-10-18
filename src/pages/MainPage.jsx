@@ -1,39 +1,45 @@
 import React, { forwardRef, useRef, useState } from 'react';
-import styled from 'styled-components';
 import Appbutton from '../ui/Appbutton';
-import { createContext } from 'react';
-
-const MainPage = forwardRef((props, ref) => {
 
 
-  const component1 = useRef(null);
-  const component2 = useRef(null);
-  const component3 = useRef(null);
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+
+// Import Swiper React components
+
+import{ Mousewheel, Keyboard } from "swiper";
+// Import Swiper styles
+
+
+function MainPage() {
+
+const [swiper, setSwiper] = useState();
 
   const component1Click=()=>{
-    component1.current.scrollIntoView({behavior:'smooth'});
+    // component1.current.scrollIntoView({ behavior:'smooth'})
+    swiper.slideTo(1);
   };
 
   const component2Click=()=>{
-    component2.current.scrollIntoView({behavior:'smooth'});
+    swiper.slideTo(2);
   };
 
-
   const component3Click=()=>{
-    component3.current.scrollIntoView({behavior:'smooth'});
+    swiper.slideTo(3);
   };
 
 
   return (
     <div>
-
-        <button onClick={component1Click}>1</button>
-        <button onClick={component2Click}>2</button>
-        <button onClick={component3Click}>3</button>
-
+      <Appbutton onClick={this.component1Click}>1</Appbutton>
+      <Appbutton onClick={this.component2Click}>2</Appbutton>
+      <Appbutton onClick={this.component3Click}>3</Appbutton>
     </div>
   )
-})
+}
 
 
 export default MainPage
